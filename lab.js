@@ -7,12 +7,17 @@
 */
 
 //CODE HERE
-
+let lovesCode = true;
+if (lovesCode === true) {
+  console.log("I love to code!");
+} else {
+  console.log("Coding has it's challenges");
+}
 // For problems 2-3 use the following lines of code:
-var amysAge = 29
-var brittanisAge = 34
-var amysBirthYear = 1991
-var brittanisBirthYear = 1986
+var amysAge = 29;
+var brittanisAge = 34;
+var amysBirthYear = 1991;
+var brittanisBirthYear = 1986;
 
 ////////// PROBLEM 2 //////////
 
@@ -22,19 +27,30 @@ var brittanisBirthYear = 1986
 
 //CODE HERE
 
+if (amysAge > brittanisAge) {
+  console.log("Amy is older");
+} else {
+  console.log("Brittani is older");
+}
 
 ////////// PROBLEM 3 //////////
 
 /*
-  Using an if statement and a comparison operator, create code that will check if Amy and Brittani were born in the same year. If they were, console.log 'Amy & Brittani were born in the same year'. If they were not, console.log 'Amy & Brittani were not born in the same year'
-*/
+  Using an if statement and a comparison operator, create code that will check if Amy and Brittani were born in the same year. 
+  If they were, console.log 'Amy & Brittani were born in the same year'. 
+  If they were not, console.log 'Amy & Brittani were not born in the same year'
+ */
 
 //CODE HERE
 
-
+if (amysBirthYear <= brittanisBirthYear) {
+  console.log("Amy & Brittani were born in the same year.");
+} else {
+  console.log("Amy & Brittani were not born in the same year.");
+}
 
 // For problems 4-5 use the following lines of code:
-var arr = [10,20,30,40,50,60]
+var arr = [10, 20, 30, 40, 50, 60];
 
 ////////// PROBLEM 4 //////////
 /*
@@ -43,18 +59,26 @@ var arr = [10,20,30,40,50,60]
 
 //Code Here
 
+let firstItem = arr[0];
 
 ////////// PROBLEM 5 //////////
 /*
-  Remove the last item from the 'arr' array and store it in a variable named 'lastItemRemoved'. Console.log the array to verify you no longer have the last item.
+  Remove the last item from the 'arr' array and store it in a variable named 'lastItemRemoved'.
+   Console.log the array to verify you no longer have the last item.
 */
 
 //Code Here
 
+let lastItemRemoved = [];
+
+lastItemRemoved.push(arr.splice(5, 1));
+console.log(arr);
+console.log(lastItemRemoved);
+
 ////////// PROBLEM 6 //////////
 
 // Do not edit the code below.
-var family = ['Tyler', 'Jordan', 'Ryan', 'Alice', 'Ireland'];
+var family = ["Tyler", "Jordan", "Ryan", "Alice", "Ireland"];
 // Do not edit the code above.
 
 /*
@@ -63,13 +87,15 @@ var family = ['Tyler', 'Jordan', 'Ryan', 'Alice', 'Ireland'];
 
 //Code Here
 
-
+for (let i = 0; i < family.length; i++) {
+  console.log(family[i]);
+}
 
 ////////// PROBLEM 7 //////////
 
 // Do not edit the code below.
-var nums = [1,2,3,6,22,98,45,23,22,12];
-let evensArr = []
+var nums = [1, 2, 3, 6, 22, 98, 45, 23, 22, 12];
+let evensArr = [];
 // Do not edit the code above.
 
 /*
@@ -78,20 +104,40 @@ let evensArr = []
 
 //Code Here
 
-
+for (let i = 0; i < nums.length; i++) {
+  console.log(nums[i])
+  if(nums[i] % 2 === 0){
+    evensArr.push(nums[i])
+  }
+} 
+console.log(evensArr)
 
 ////////// PROBLEM 8 //////////
 
 // Do not edit the code below.
-var score = 74
+var score = 74;
 // Do not edit the code above.
 
 /*
-  Determine if the letter grade of the given variable 'score'. If the variable is a 90 or above, console-log an 'A', between 80 and 89, console-log a 'B', between 70 and 79, 'C', between 60 and 69, 'D', and anything below 60 should console-log an 'F'.
+  Determine if the letter grade of the given variable 'score'. If the variable is a 90 or above, console-log an 'A',
+  between 80 and 89, console-log a 'B', between 70 and 79, 'C', between 60 and 69, 'D', 
+  and anything below 60 should console-log an 'F'.
 */
 
 //Code Here
 
+if(score >= 90){
+  console.log("A") 
+} else if(score <= 89 & score >= 80){
+    console.log("B")
+}     else if(score <= 79 & score >= 70){
+        console.log("C")
+}         else if(score <= 69 & score >= 60){
+            console.log("D")
+}             else if(score < 60){
+                console.log("F")
+}
+ 
 
 ////////// Intermediate Problems //////////
 
@@ -104,18 +150,14 @@ var score = 74
 
 //CODE HERE
 
-
 // Try to change the value of changeMyMind (irrespective of whether it is true or false) and then console.log it's new status. It should log true. Hint: use the not operator.
 
 //CODE HERE
 
-
-
-
 ////////// PROBLEM 10 //////////
 
 // Do not edit the code below.
-var myFavoriteNumbers = [4,8,12,16,20,24];
+var myFavoriteNumbers = [4, 8, 12, 16, 20, 24];
 // Do not edit the code above.
 
 /*
@@ -124,28 +166,24 @@ var myFavoriteNumbers = [4,8,12,16,20,24];
 
 //Code Here
 
-
-
-// Subscripting (accessing values using their index) an array can fail. What happens if you subscript to the 7th element, but there are not 7 elements in the array? Let's write some code to check for that. 
+// Subscripting (accessing values using their index) an array can fail. What happens if you subscript to the 7th element, but there are not 7 elements in the array? Let's write some code to check for that.
 // Use an if statement to check the length of the 'myFavoriteNumbers' array. If it's less than 7, log 'There are not enough elements in this array' to the console. If the length is more than 7, reassign the value of 'someNum' to the value of the 7th element in the array. (Hint: how can you make sure that your code works for exactly 7 elements? What index do you use to get the 7th element?)
 
 //Code Here
 
-
 ////////// PROBLEM 11 //////////
 
 // Do not edit the code below.
-var listOfNumbers = [1,2,3,4,5,6,7,8,9,10,11,12];
+var listOfNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 // Do not edit the code above.
 
 // Use a for-loop to iterate through 'listOfNumbers', checking to see if each number is divisible by 3. If it is, console.log '{number} is divisible by 3.'
 
 //Code Here
 
-
 ////////// PROBLEM 12 //////////
 // Do not edit the code below.
-var letters = ['A', 'B', 'C', 'D', 'E'];
+var letters = ["A", "B", "C", "D", "E"];
 // Do not edit the code above.
 
 /*
@@ -154,14 +192,13 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 
 //Code Here
 
-
 ////////// Advanced Problems //////////
 
 ////////// PROBLEM 13 //////////
 // Switch statements can be excellent alternatives to for loops. Look up switch statements (I recommend W3 Schools) and try to implement one for the following.
 
 // Do not edit the code below.
-let letterGrade = 'B'
+let letterGrade = "B";
 // Do not edit the code above.
 
 /* Use a switch statement on 'letterGrade' and console.log the appropriate response.
@@ -175,8 +212,6 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
 */
 
 //Code Here
-
-
 
 ////////// PROBLEM 14 //////////
 /* The famous FizzBuzz, Devmountain style!
