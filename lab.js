@@ -105,12 +105,12 @@ let evensArr = [];
 //Code Here
 
 for (let i = 0; i < nums.length; i++) {
-  console.log(nums[i])
-  if(nums[i] % 2 === 0){
-    evensArr.push(nums[i])
+  console.log(nums[i]);
+  if (nums[i] % 2 === 0) {
+    evensArr.push(nums[i]);
   }
-} 
-console.log(evensArr)
+}
+console.log(evensArr);
 
 ////////// PROBLEM 8 //////////
 
@@ -126,31 +126,38 @@ var score = 74;
 
 //Code Here
 
-if(score >= 90){
-  console.log("A") 
-} else if(score <= 89 & score >= 80){
-    console.log("B")
-}     else if(score <= 79 & score >= 70){
-        console.log("C")
-}         else if(score <= 69 & score >= 60){
-            console.log("D")
-}             else if(score < 60){
-                console.log("F")
+if (score >= 90) {
+  console.log("A");
+} else if ((score <= 89) & (score >= 80)) {
+  console.log("B");
+} else if ((score <= 79) & (score >= 70)) {
+  console.log("C");
+} else if ((score <= 69) & (score >= 60)) {
+  console.log("D");
+} else if (score < 60) {
+  console.log("F");
 }
- 
 
 ////////// Intermediate Problems //////////
 
 ////////// PROBLEM 9 //////////
 /*
   Create a variable called 'changeMyMind' and set it equal to true. 
-  Check to see if changeMyMind is set to true or false, if it is true, change the status to false, if it is false, change the status to true.
+  Check to see if changeMyMind is set to true or false, if it is true, change the status to false, if it is false, 
+  change the status to true.
 
 */
 
 //CODE HERE
+let changeMyMInd = true;
 
-// Try to change the value of changeMyMind (irrespective of whether it is true or false) and then console.log it's new status. It should log true. Hint: use the not operator.
+if (changMyMind === true) {
+  changeMyMInd = false;
+} else {
+  changeMyMind = true;
+}
+// Try to change the value of changeMyMind (irrespective of whether it is true or false) and then console.log it's new status.
+// It should log true. Hint: use the not operator.
 
 //CODE HERE
 
@@ -212,6 +219,21 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
 */
 
 //Code Here
+
+switch (letterGrade) {
+  case "A":
+    console.log("The student is doing excellently.");
+  case "B":
+    console.log("The student is doing well.");
+  case "C":
+    Console.log("The student is doing alright.");
+  case "D":
+    console.log("The student is not doing very well.");
+  case "F":
+    console.log("The student is failing.");
+  default:
+    console.log("Not and eligible grade.");
+}
 
 ////////// PROBLEM 14 //////////
 /* The famous FizzBuzz, Devmountain style!
