@@ -200,10 +200,20 @@ myFavoriteNumbers.push(someNum[6])
 var listOfNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 // Do not edit the code above.
 
-// Use a for-loop to iterate through 'listOfNumbers', checking to see if each number is divisible by 3. If it is, console.log '{number} is divisible by 3.'
+// Use a for-loop to iterate through 'listOfNumbers', checking to see if each number is divisible by 3. 
+//If it is, console.log '{number} is divisible by 3.'
 
 //Code Here
 
+let number = []
+
+for(let i = 0; i < listOfNumbers.length; i++) {
+  console.log(listOfNumbers[i]);
+  if(listOfNumbers [i] % 3 === 0) {
+      number.push(listOfNumbers[i]);
+  }
+}
+  console.log(number)
 ////////// PROBLEM 12 //////////
 // Do not edit the code below.
 var letters = ["A", "B", "C", "D", "E"];
